@@ -3,7 +3,7 @@ import { View, ScrollView, StyleSheet, TouchableOpacity } from "react-native";
 import { useSelector } from "react-redux";
 import { Typography } from "../Typography";
 import { LinearGradient } from "expo-linear-gradient";
-import BackArrowSvg from "../../assets/icons/backArrow.svg";
+import BackArrowPurpleSvg from "../../assets/icons/backArrowPurple.svg";
 import { useNavigation } from "@react-navigation/native";
 
 const ThreeDayWeatherScreen = () => {
@@ -18,7 +18,7 @@ const ThreeDayWeatherScreen = () => {
     >
       <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
-          <BackArrowSvg width={30} height={30} />
+          <BackArrowPurpleSvg width={30} height={30} />
         </TouchableOpacity>
         <Typography f24 semibold color="#000000" textAlign="center">
          Тести

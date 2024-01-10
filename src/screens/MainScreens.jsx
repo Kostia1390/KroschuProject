@@ -43,23 +43,22 @@ const MainScreens = () => {
       </TouchableOpacity>
 
       <TouchableOpacity
-        onPress={() => navigation.navigate("BreakSceen")}>
+        onPress={() => navigation.navigate("Break")}>
         <WeatherWindows title="Перерви" />
       </TouchableOpacity>
 
       <TouchableOpacity
-        onPress={() => navigation.navigate("FourteenDayWeather")}
+        onPress={() => navigation.navigate("OfficeInfo")}
       >
         <WeatherWindows title="Інформація про кабінети" />
       </TouchableOpacity>
 
       <TouchableOpacity
-        onPress={() => navigation.navigate("FourteenDayWeather")}
+        onPress={() => navigation.navigate("PhoneNumber")}
       >
         <WeatherWindows title="Номер телефону тренера" />
       </TouchableOpacity>
 
-      <Logo style={styles.logo} width={300} height={120}/>
       <SettingsModal
         visible={modalVisible}
         onClose={() => setModalVisible(false)}
