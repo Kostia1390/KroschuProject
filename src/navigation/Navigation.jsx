@@ -7,6 +7,7 @@ import TestScreen from "../screens/TestScreen";
 import BreakScreen from "../screens/BreakScreen";
 import OfficeInfoScreen from "../screens/OfficeInfoScreen";
 import PhoneNumberScreen from "../screens/PhoneNumberScreen";
+import BusScheduleScreen from "../screens/BusScheduleScreen";
 
 
 import CitySearchScreen from "../screens/CitySearchScreen";
@@ -47,6 +48,11 @@ export const Navigation = () => {
                <Stack.Screen
           name="PhoneNumber"
           component={PhoneNumberScreen}
+          options={{ headerShown: false }}
+        />
+            <Stack.Screen
+          name="BusSchedule"
+          component={BusScheduleScreen}
           options={{ headerShown: false }}
         />
           <Stack.Screen

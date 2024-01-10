@@ -1,17 +1,15 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import { Typography } from "../Typography";
-import { useSelector } from "react-redux";
 import BackArrowSvg from "../../assets/icons/backArrow.svg";
 
 const WeatherWindows = ({ title }) => {
-  const isDarkTheme = useSelector((state) => state.theme.isDarkTheme);
 
   return (
     <View
       style={[
         styles.container,
-        { backgroundColor: isDarkTheme ? "#0a3a0a" : "#563187" },
+        { backgroundColor:  "#563187" },
       ]}
     >
       <View style={styles.textContainer}>

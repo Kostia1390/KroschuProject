@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Image, TouchableOpacity, Text } from 'react-native';
-import { useSelector } from "react-redux";
 import CustomInput from '../components/CustomInput';
 import { LinearGradient } from "expo-linear-gradient";
 import * as ImagePicker from 'expo-image-picker';
@@ -10,7 +9,6 @@ const CitySearchScreen = ({ navigation }) => {
   const [image, setImage] = useState(null);
   const [requestStatus, setRequestStatus] = useState(null);
 
-  const isDarkTheme = useSelector((state) => state.theme.isDarkTheme);
 
 
   const onSearch = () => {
@@ -72,7 +70,7 @@ const CitySearchScreen = ({ navigation }) => {
 
   return (
     <LinearGradient
-      colors={isDarkTheme ? ["#000", "#333"] : ["#a7ddef", "#3aa1c9"]}
+      colors={ ["#a7ddef", "#3aa1c9"]}
       style={styles.container}
     >
       <View style={styles.header}>

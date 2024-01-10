@@ -6,19 +6,21 @@ import {
   ScrollView,
   TouchableOpacity,
 } from "react-native";
-import { useSelector} from "react-redux";
+import { useTranslation } from 'react-i18next';
 import { Typography } from "../Typography";
 import BackArrowPurpleSvg from "../../assets/icons/backArrowPurple.svg";
 import { useNavigation } from "@react-navigation/native";
 
 const LearnProgramScreen = () => {
-  const isDarkTheme = useSelector((state) => state.theme.isDarkTheme);
   const navigation = useNavigation();
+  const { t } = useTranslation();
+
+
 
 
   return (
     <LinearGradient
-      colors={isDarkTheme ? ["#000", "#333"] : ["#ffffff", "#ffffff"]}
+      colors={ ["#ffffff", "#ffffff"]}
       style={styles.container}
     >
       <View
@@ -32,8 +34,8 @@ const LearnProgramScreen = () => {
           <BackArrowPurpleSvg width={30} height={30} />
         </TouchableOpacity>
         <Typography f24 semibold color="#563187" textAlign="center">
-          Навчальна програма
-        </Typography>
+      {t('learnProgram.title')}
+    </Typography>
         <View style={{ width: 20, height: 20 }} />
       </View>
       <ScrollView

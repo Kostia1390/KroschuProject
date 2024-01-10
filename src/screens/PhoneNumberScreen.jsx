@@ -3,19 +3,21 @@ import { View, ScrollView, StyleSheet, TouchableOpacity } from "react-native";
 import { useSelector } from "react-redux";
 import { Typography } from "../Typography";
 import { LinearGradient } from "expo-linear-gradient";
+import { useTranslation } from 'react-i18next';
 import BackArrowPurpleSvg from "../../assets/icons/backArrowPurple.svg";
 import { useNavigation } from "@react-navigation/native";
 
 const PhoneNumberScreen = () => {
-  const isDarkTheme = useSelector((state) => state.theme.isDarkTheme);
   const navigation = useNavigation();
+  const { t } = useTranslation();
+
 
 
 
 
   return (
     <LinearGradient
-      colors={isDarkTheme ? ["#000", "#333"] : ["#ffffff", "#fafafa"]}
+      colors={["#ffffff", "#fafafa"]}
       style={styles.container}
     >
       <View style={styles.header}>
@@ -23,7 +25,7 @@ const PhoneNumberScreen = () => {
           <BackArrowPurpleSvg width={30} height={30} />
         </TouchableOpacity>
         <Typography f24 semibold color="#000000" textAlign="center">
-        Номер телефону
+        {t('phoneNumber.title')}
         </Typography>
         <View style={{ width: 30, height: 30 }} />
       </View>
