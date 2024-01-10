@@ -1,8 +1,10 @@
-// App.js
 import React from "react";
 import { Provider } from "react-redux";
 import store from "./src/redux/store";
 import { Navigation } from "./src/navigation/Navigation";
+import 'intl-pluralrules';
+import './i18n'; 
+
 
 const App = () => (
   <Provider store={store}>
@@ -11,3 +13,4 @@ const App = () => (
 );
 
 export default App;
+

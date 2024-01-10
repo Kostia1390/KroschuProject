@@ -5,6 +5,11 @@ import MainScreens from "../screens/MainScreens";
 import LearnProgramScreen from "../screens/LearnProgramScreen";
 import TestScreen from "../screens/TestScreen";
 import BreakScreen from "../screens/BreakScreen";
+import OfficeInfoScreen from "../screens/OfficeInfoScreen";
+import PhoneNumberScreen from "../screens/PhoneNumberScreen";
+import BusScheduleScreen from "../screens/BusScheduleScreen";
+
+
 import CitySearchScreen from "../screens/CitySearchScreen";
 
 
@@ -31,8 +36,23 @@ export const Navigation = () => {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="BreakScreen"
+          name="OfficeInfo"
+          component={OfficeInfoScreen}
+          options={{ headerShown: false }}
+        />
+           <Stack.Screen
+          name="Break"
           component={BreakScreen}
+          options={{ headerShown: false }}
+        />
+               <Stack.Screen
+          name="PhoneNumber"
+          component={PhoneNumberScreen}
+          options={{ headerShown: false }}
+        />
+            <Stack.Screen
+          name="BusSchedule"
+          component={BusScheduleScreen}
           options={{ headerShown: false }}
         />
           <Stack.Screen
